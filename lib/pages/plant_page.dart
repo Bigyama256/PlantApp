@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:plantapp/utils/app_colors.dart';
 
-import '../utils/app_colors.dart';
 
-class SignUpGoogle extends StatelessWidget {
-  const SignUpGoogle({super.key});
+class PlantPage extends StatelessWidget {
+  const PlantPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +11,8 @@ class SignUpGoogle extends StatelessWidget {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        decoration: BoxDecoration(
-          color: AppColors.primaryColor,
-        ),
+        color: AppColors.primaryColor,
+        
       ),
     );
   }

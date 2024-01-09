@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:plantapp/common_widgets/custom_elevated_button.dart';
+import 'package:plantapp/pages/location_page.dart';
 import 'package:plantapp/utils/app_colors.dart';
 
 class OnboardingPage extends StatefulWidget {
@@ -155,11 +156,20 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     alignment: Alignment.bottomRight,
                     child: CustomElevatedButton(
                       onPressed: () {
-                        if (currentOnboardingPage < onboarding.length) {
+                        if (currentOnboardingPage < onboarding.length - 1) {
                           pageController.animateToPage(
                             currentOnboardingPage + 1,
                             duration: Duration(milliseconds: 500),
                             curve: Curves.linear,
+                          );
+                        } else if (currentOnboardingPage == 2) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return LocationPage();
+                              },
+                            ),
                           );
                         }
                       },
