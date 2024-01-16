@@ -27,9 +27,14 @@ class LocationPage extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              Icon(
-                Icons.arrow_back_ios,
-                color: AppColors.yellowColor,
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: AppColors.yellowColor,
+                ),
               ),
               SizedBox(
                 height: 20,
